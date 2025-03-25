@@ -1,5 +1,8 @@
 install:
 	pip install -r requirements.txt
 
-run:
-	uv run mcp
+run-client:
+	python simple_client_server/clients/langchain_client.py
+
+run-server:
+	python simple_client_server/mcp/weather_server.py

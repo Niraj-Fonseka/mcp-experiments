@@ -16,3 +16,7 @@ def debug_error(error: str) -> list[base.Message]:
         base.UserMessage(error),
         base.AssistantMessage("I'll help debug that. What have you tried so far?"),
     ]
+
+
+if __name__ == "__main__":
+    mcp.run(transport="stdio")

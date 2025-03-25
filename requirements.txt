@@ -2,3 +2,9 @@ uv
 mcp
 mcp[cli]
 requests
+langchain-mcp-adapters
+langgraph
+langchain-openai
+mcp-server-time
+tzdata
+pytz
