@@ -24,14 +24,14 @@ async def run_agent():
                 # make sure you start your weather server on port 8000
                 "command": "python",
                 # Make sure to update to the full absolute path to your math_server.py file
-                "args": ["-m", "mcp_server_time", "--local-timezone=America/New_York"],
+                "args": ["-m", "mcp_server_time", "--local-timezone=America/Chicago"],
                 "transport": "stdio",
             }
         }
     ) as client:
         agent = create_react_agent(model, client.get_tools())
         #response = await agent.ainvoke({"messages": "what's (3 + 5) x 12? and what is the weather in nyc?"})
-        response = await agent.ainvoke({"messages": "What is the time and the weather in New York?"})
+        response = await agent.ainvoke({"messages": "What is the time now ?"})
         #print(response)
         #weather_response = await agent.ainvoke({"messages": "what is the weather in nyc?"})
         print(get_final_answer(response))
