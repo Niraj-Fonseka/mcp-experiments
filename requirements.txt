@@ -8,3 +8,4 @@ langchain-openai
 mcp-server-time
 tzdata
 pytz
+fastmcp
