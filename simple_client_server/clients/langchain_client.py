@@ -30,10 +30,7 @@ async def run_agent():
         }
     ) as client:
         agent = create_react_agent(model, client.get_tools())
-        #response = await agent.ainvoke({"messages": "what's (3 + 5) x 12? and what is the weather in nyc?"})
         response = await agent.ainvoke({"messages": "What is the time now ?"})
-        #print(response)
-        #weather_response = await agent.ainvoke({"messages": "what is the weather in nyc?"})
         print(get_final_answer(response))
 
 def get_final_answer(response):
