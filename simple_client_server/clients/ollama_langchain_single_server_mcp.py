@@ -1,15 +1,15 @@
 # Create server parameters for stdio connection
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
+from langchain_ollama import ChatOllama
 
 from langchain_mcp_adapters.tools import load_mcp_tools
 from langgraph.prebuilt import create_react_agent
 
-from langchain_openai import ChatOpenAI
 import asyncio  
 
 
-model = ChatOpenAI(model="gpt-3.5-turbo")
+model = ChatOllama(model="llama3.1")
 
 server_params = StdioServerParameters(
     command="python",
