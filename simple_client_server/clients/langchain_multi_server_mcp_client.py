@@ -6,7 +6,7 @@ model = ChatOpenAI(model="gpt-3.5-turbo")
 import asyncio  
 
 
-async def run_agent():
+async def run_agent(question):
     async with MultiServerMCPClient(
         {
             "math": {
@@ -30,11 +30,13 @@ async def run_agent():
         }
     ) as client:
         agent = create_react_agent(model, client.get_tools())
-        response = await agent.ainvoke({"messages": "What is the time now ?"})
+        response = await agent.ainvoke({"messages": question})
         print(get_final_answer(response))
 
 def get_final_answer(response):
     return response['messages'][len(response['messages']) - 1].content
 
 if __name__ == "__main__":
-    asyncio.run(run_agent())
+
+    question = "What is the time and weather in New York ?"
+    asyncio.run(run_agent(question))
