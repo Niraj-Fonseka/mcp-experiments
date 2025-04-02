@@ -1,5 +1,7 @@
 # MCP Experiments
 
+Article : https://medium.com/@fonseka.live/exploring-model-context-protocol-with-langchain-openai-and-ollama-10d908644277
+
 This repository contains experiments with MCP (Message Control Protocol) integrated with LangChain and various LLM models.
 
 ## Overview
