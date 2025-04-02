@@ -7,13 +7,16 @@ from langgraph.prebuilt import create_react_agent
 
 from langchain_openai import ChatOpenAI
 import asyncio  
+import dotenv
+
+dotenv.load_dotenv()
 
 
 model = ChatOpenAI(model="gpt-3.5-turbo")
 
 server_params = StdioServerParameters(
     command="python",
-    args=["simple_client_server/mcp/math_server.py"],
+    args=["servers/math_server.py"],
 )
 
 async def run_agent():

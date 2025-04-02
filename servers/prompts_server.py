@@ -1,7 +1,7 @@
 from mcp.server.fastmcp import FastMCP
 from mcp.server.fastmcp.prompts import base
 
-mcp = FastMCP("My App")
+mcp = FastMCP("Prompt Server")
 
 
 @mcp.prompt()

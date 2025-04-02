@@ -1,6 +1,6 @@
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("My App")
+mcp = FastMCP("Resource Server")
 
 
 @mcp.resource("config://app")

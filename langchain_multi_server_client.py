@@ -4,6 +4,9 @@ from langgraph.prebuilt import create_react_agent
 from langchain_openai import ChatOpenAI
 model = ChatOpenAI(model="gpt-3.5-turbo")
 import asyncio  
+import dotenv
+
+dotenv.load_dotenv()
 
 
 async def run_agent(question):
@@ -12,7 +15,7 @@ async def run_agent(question):
             "math": {
                 "command": "python",
                 # Make sure to update to the full absolute path to your math_server.py file
-                "args": ["simple_client_server/mcp/math_server.py"],
+                "args": ["servers/math_server.py"],
                 "transport": "stdio",
             },
             "weather": {
