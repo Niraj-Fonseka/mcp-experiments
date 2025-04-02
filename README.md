@@ -17,7 +17,7 @@ The project demonstrates how to create and use MCP servers with different LLMs (
 ### Clients
 - `langchain_single_server_client.py`: Connects to a single MCP server using OpenAI's GPT-3.5
 - `ollama_langchain_single_server_client.py`: Similar to above but uses Ollama's local LLM
-- `langchain_multi_server_client.py`: (Referenced in Makefile but not shown in context)
+- `langchain_multi_server_client.py`:  Connects to a multiple MCP servers using OpenAI's GPT-3.5
 
 ## Setup
 
