@@ -30,6 +30,7 @@ async def run_agent():
             agent_response = await agent.ainvoke({"messages": "what's (3 + 5) x 12?"})
             print(get_final_answer(agent_response))
 
+
 def get_final_answer(response):
     return response['messages'][len(response['messages']) - 1].content
 

@@ -1,6 +1,5 @@
 setup: setup-venv install
 
-
 setup-venv:
 	python -m venv .venv
 
